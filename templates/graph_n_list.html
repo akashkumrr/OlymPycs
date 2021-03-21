@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='main.css')}}">
+    
+  {% if title %}
+  <title>OLMPYCS -{{title}}</title>
+  {% else %}
+  <title>OLMPYCS </title>
+  {% endif %}
+  
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">OLMP<i>y</i>CS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+        
+        
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+<div class="wrapper" style="border-bottom-style: solid;border-bottom-width: -200px;border-left-style: solid;left:0px">
+    <div class="sidebar">
+        <h2>NAVIGATOR</h2>
+        <ul>
+            <li><a href="/"><i class="fas fa-home"></i>Home</a></li>
+            <li><a  href="/sportswise"><i class="fas fa-home"></i>Sportwise</a></li>
+            <li><a href="/Country"><i class="fas fa-home"></i>Countrywise</a>
+              <ul>
+                <li><a href="/comparemedaltally"><i class="fas fa-home">Compare Medal Tally</a>
+                  <ul>
+                    <li><a href="/particularyear"><i class="fas fa-home">For a year</a></li>
+                    <li><a href="/historicalcomparison"><i class="fas fa-home">All Time Comparison</a></li>
+                  </ul>
+                </li>
+                <li><a href="/bestyear"><i class="fas fa-home">Best Year</a></li>
+                <li><a class="current" style="background-color: #8F00FF;" href="/bestsport"><i class="fas fa-home">Best Sport</a></li>
+              </ul></li>
+            <li><a href="/popular"><i class="fas fa-project-diagram"></i>Popular Here</a>
+              <ul>
+                <li><a href="/predictgender"><i class="fas fa-home">Predict Gender</a></li>
+                <li><a href="/predictmedal"><i class="fas fa-home">Predict Medals</a></li>
+              </ul></li>
+            <li><a href="/about"><i class="fas fa-blog"></i>About</a></li>
+            
+        </ul> 
+      
+    </div>
+    
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <main role="main" class="container">
+    
+  <div class="row">
+  	<div class="col-md-2"></div>
+    <div class="col-md-9">
+      <br><center><a href="http://www.olympics.org"><img src="/static/ol.png" style="max-width:1024px; max-height:200px;"></a></center>
+  <center><h6><i>'Citius, Altius, Fortius'</i><br><br>
+
+
+    <h2>Sport-wise performance of {{country_name}} </h2>
+
+  <img src="http://localhost:5000/{{graphy_path}}" style="border: 1px solid #000; max-width:1024px; max-height:1920px;">
+  
+  
+
+<ol>
+<br><br>
+<h3>Select a sport to view year-wise performance of {{country_name}} : </h3>
+<br>
+{% for thing in the_listy%}
+  <a href="/thepath/{{country_name}}/{{ thing|safe }}"><li>{{ thing|safe }}</li></a>
+{% endfor %}  
+</ol>
+      <br><br><br>
+      
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="wrapper">
+    <div class="sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-user"></i>Sportwise</a></li>
+            <li><a href="#"><i class="fas fa-address-card"></i>Countrywise</a>
+            	<ul>
+            		<li><a href="#">Comparison</a>
+            			<ul>
+            				<li><a href="#">For a year</a></li>
+            				<li><a href="#">All Time Comparison</a></li>
+            			</ul>
+            		</li>
+            		<li><a href="#">Best Year</a></li>
+            		<li><a href="#">Best Sport</a></li>
+            	</ul></li>
+            <li><a href="#"><i class="fas fa-project-diagram"></i>Popular Here</a>
+            	<ul>
+            		<li><a href="#">Predict Gender</a></li>
+            		<li><a href="#">Predict Medals</a></li>
+            	</ul></li>
+            <li><a href="#"><i class="fas fa-blog"></i>Address</a></li>
+            
+        </ul> 
+      
+    </div>
+    
+</div>
+-->

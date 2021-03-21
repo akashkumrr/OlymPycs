@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='main.css')}}">
+  {% if title %}
+  <title>OLMPYCS -{{title}}</title>
+  {% else %}
+  <title>OLMPYCS </title>
+  {% endif %}
+</head>
+<body>
+<header class="site-header">
+  <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+    <div class="container">
+      <a class="navbar-brand mr-4" href="/">OLMP<i>y</i>CS</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarToggle">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="/">Home</a>
+          <a class="nav-item nav-link" href="/about">About</a>
+        </div>
+        
+        
+      </div>
+    </div>
+  </nav>
+</header>
+  <main role="main" class="container">
+    
+  <div class="row">
+    <div class="col-md-12">
+      <center><a href="http://www.olympics.org"><img src="/static/ol.png" style="max-width:1024px; max-height:200px;"></a></center>
+<center><h2><i>'Citius, Altius, Fortius'</i><br><br>
+</h2></center>
+<br>
+This is a project on analysis of olympic data.
+It has been completed by Aniruddh Bhagwat,Akash Kumar and Vaibhav Kumar.
+We have data set of olympic data over the years (1896-2016) and have performed various operations on them.
+For more information on data set visit <a href="https://www.kaggle.com/heesoo37/120-years-of-olympic-history-athletes-and-results" target="blank">here.</a>
+<br>
+<br>
+<center><h5><i>'ESPRIT DE CORPS'</i></h5></center></br></br></br>
+</br>
+</br>
+      <br><br><br>
+      
+    </div>
+
+</body>
+</html>
