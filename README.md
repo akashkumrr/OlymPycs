@@ -4,7 +4,7 @@
 ### Language - Python<br /><br />
 ### Used Flask to implement the back-end and HTML+CSS for front-end
 
-### Features of the project are :
+### The features of the project are :
 * Analyzed the data in 2 major ways
   * Sportwise: Assessed popularity of a sport over time and participation of countries in that sport
   * This allowed to see how much a sport gained /lost popularity over time and countries that dominate that particular sport<br />
